@@ -1,50 +1,49 @@
-
 #import "template.typ": *
+#import "@preview/codly:1.0.0": *
 
 #show: project.with(
-	title: "Titolo Tesi",
-	subtitle: "Sottotitolo tesi",
-	author: "Autore Tesi",
-	professors: "Prof. Mario Rossi"
+  title: [
+    #lorem(5)
+  ],
+  author: "Pippo Baudo",
+  professors: (
+    "Prof. Lupo Lucio",
+    "Prof. Gatto Silvestro",
+    "Dott. Paperino"
+  ),
+  department: "Dipartimento della Televisione dei Ragazzi",
+  course: "Laurea in Scienze dell'Albero Azzurro",
+  session: "di Luglio",
+  aa: "2000/2001",
+  abstract: [
+    #lorem(100)
+  ],
+  dedication: [ 
+    A quella puntata della Melevisione interrotta a metà.
+  ],
+  final: true,
 )
 
-#counter(page).update(0)
-#set page(numbering: "1")
-
-= Abstract
+= Introduzione
 
 #lorem(100)
 
-#lorem(100)
+== Sotto-paragrafo 1
 
-#lorem(100)
+#lorem(100) @miur
 
-#pagebreak()
+=== Sotto-sotto-paragrafo 1
 
-= Dedica
+```swift
+let x = 1
 
-#lorem(100)
+if x == 1 {
+  print("Hello, world!")
+}
+```
 
-#pagebreak()
 
-#outline(title: [ Indice dei Contenuti ], indent: 20pt)
 
-#pagebreak()
 
-= Contenuti
 
-#lorem(100)
 
-== Sottosezione 1
-
-#lorem(100)
-
-#lorem(100)
-
-Esempio di bibliografia @miur.
-
-#pagebreak()
-
-// Bibliografia
-
-#bibliography("bibliography.bib", style: "chicago-author-date")
